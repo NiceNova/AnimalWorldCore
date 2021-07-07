@@ -22,10 +22,10 @@ namespace animalWorld
                 attacking.attack(defending);
                 Console.Write("!");
                 Console.WriteLine();
-                string[] ActionAnswerWords = { "А в это ответ ", "Обалдевший от такого ", "А разъяренный ", "Испугавшийся ", "Шатающийся " };
-                Console.Write(ActionAnswerWords[rand.Next(NatureList.Length - 1)]);
-                defending.attack(attacking);
-                Console.Write("!");
+                //string[] ActionAnswerWords = { "А в это ответ ", "Обалдевший от такого ", "А разъяренный ", "Испугавшийся ", "Шатающийся " };
+                //Console.Write(ActionAnswerWords[rand.Next(NatureList.Length - 1)]);
+                //defending.attack(attacking);
+                //Console.Write("!");
                 Console.WriteLine();
                 Console.ReadKey();
             }         
