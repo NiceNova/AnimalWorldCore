@@ -13,7 +13,7 @@ namespace animalWorld
             while (true)
             {
                 Random rand = new Random();
-                IAnimal[] NatureList = { new NeedleBelly(), new BeakTail(), new DesertRedBally(), new YellowShel(), new ClaweAdngleTooth(), new SpikeSwordBearer() };
+                IAnimal[] NatureList = { new NeedleBelly(), new BeakTail(), new DesertRedBally(), new YellowShel(), new ClaweAdngleTooth(), new SpikeSwordBearer() , new GillsSnout() , new TailSnout() };
                 string[] ActionWords = { "Из куста выполз ", "С дерева свалился ", "Внезапно озверевший ", "Перепуганный ",
                 "Криво шатающийся ", "Бегущий по полю ", "Очень удивившийся " };
 
@@ -25,7 +25,7 @@ namespace animalWorld
                 if (((attacking.Land() ==  true) && (defending.Land() == true)) || ((attacking.Aqua() == true) && (defending.Aqua() == true)))
                 {
                     Console.Write(ActionWords[rand.Next(ActionWords.Length - 1)]);
-                    attacking.attack(defending);
+                    attacking.Attack(defending);
                     Console.Write("!");
                     Console.WriteLine();
                 }
@@ -51,7 +51,7 @@ namespace animalWorld
                         //Console.Write(ActionAnswerWords[rand.Next(NatureList.Length - 1)]);
                         //defending.attack(attacking);
                         //Console.Write("!");
-                        Console.WriteLine();
+                        //Console.WriteLine();
                 Console.ReadKey();
             }         
         }

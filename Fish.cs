@@ -18,5 +18,20 @@ namespace animalWorld
         public string AttackManner() => " пульнул шипом ";
 
     }
+    class GillsSnout : IFish
+    {
+        string IAnimal.Name() => "Жабрырыл";
+        string IAnimal.NameSupplement() => "Жабрырыла";
+        public string AttackManner() => " облизал усами ";
+
+    }
+    class TailSnout : IFish
+    {
+        string IAnimal.Name() => "Хвостоморд";
+        string IAnimal.NameSupplement() => "Хвостоморда";
+        public string AttackManner() => " измазал рыбьим жиром ";
+
+    }
+
 
 }

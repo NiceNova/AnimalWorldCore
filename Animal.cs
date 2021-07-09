@@ -15,7 +15,7 @@ namespace animalWorld
         //void Move();
         //void eat();
         //void breathe();
-        void attack(IAnimal attacked)
+        void Attack(IAnimal attacked)
         {
             Console.Write(this.Name());
             Console.Write(this.AttackManner());
