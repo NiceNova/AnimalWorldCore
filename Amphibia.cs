@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IAmphibia : IAnimal, ILandHabitat, IAquaticHabitat
+    interface IAmphibia : ILandHabitat, IAquaticHabitat
     {
 
 

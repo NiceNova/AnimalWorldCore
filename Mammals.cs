@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IMammals : IAnimal
+    interface IMammals : ILandHabitat
     {
        
     }
 
-    class NeedleBelly : IMammals, ILandHabitat
+    class NeedleBelly : IMammals 
     {
         string IAnimal.Name() => "Иглобрюх";
         string IAnimal.NameSupplement() => "Иглобрюха";

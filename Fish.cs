@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IFish : IAnimal
+    interface IFish : IAquaticHabitat
     {
 
     }
 
-    class SpikeSwordBearer : IFish, IAquaticHabitat
+    class SpikeSwordBearer : IFish
     {
         string IAnimal.Name() => "Игольчатый меченеосец";
         string IAnimal.NameSupplement() => "Игольчатого меченеосца";

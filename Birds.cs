@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IBirds : IAnimal
+    interface IBirds : ILandHabitat
     {
     }
-    class BeakTail : IBirds, ILandHabitat
+    class BeakTail : IBirds
     {
 
         string IAnimal.Name() => "Клювохвост";

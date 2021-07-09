@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IReptiles : IAnimal
+    interface IReptiles : ILandHabitat
     {
 
     }
-    class DesertRedBally : IReptiles, ILandHabitat
+    class DesertRedBally : IReptiles
     {
         string IAnimal.Name() => "Пустынный краснопуз ";
         string IAnimal.NameSupplement() => "Пустынного краснопуза";

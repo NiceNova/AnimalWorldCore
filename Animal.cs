@@ -21,15 +21,20 @@ namespace animalWorld
             Console.Write(this.AttackManner());
             Console.Write(attacked.NameSupplement());
         }
+        bool Aqua() => false;
+
+        bool Land() => false;
+
+
 
     }
-    interface IAquaticHabitat
+    interface IAquaticHabitat : IAnimal
     {
-        const bool Aqua = true;
+        bool IAnimal.Aqua() => true;
 
     }
-    interface ILandHabitat
+    interface ILandHabitat : IAnimal
     {
-        const bool Land = true;
+        bool IAnimal.Land() => true;
     }
 }
