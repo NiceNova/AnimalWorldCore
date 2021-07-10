@@ -26,8 +26,7 @@ namespace animalWorld
                 {
                     Console.Write(ActionWords[rand.Next(ActionWords.Length - 1)]);
                     attacking.Attack(defending);
-                    Console.Write("!");
-                    Console.WriteLine();
+
                 }
                 else if (attacking.Land() != defending.Land())
                 {

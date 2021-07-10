@@ -17,9 +17,7 @@ namespace animalWorld
         //void breathe();
         void Attack(IAnimal attacked)
         {
-            Console.Write(this.Name());
-            Console.Write(this.AttackManner());
-            Console.Write(attacked.NameSupplement());
+            Console.WriteLine(this.Name() + this.AttackManner() + attacked.NameSupplement() + "!");
         }
         bool Aqua() => false;
 
