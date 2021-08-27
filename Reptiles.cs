@@ -6,17 +6,27 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IReptiles : ILandHabitat
+    class Reptiles : Animal/*, ILandHabitat*/
     {
 
     }
-    class DesertRedBally : IReptiles
+    class DesertRedBally : Reptiles
     {
-        string IAnimal.Name() => "Пустынный краснопуз ";
-        string IAnimal.NameSupplement() => "Пустынного краснопуза";
-        public string AttackManner() => " Швырнул хвостом ";
 
+        public DesertRedBally()
+        {
+            Name = "Пустынный краснопуз ";
+            NameSupplement = "Пустынного краснопуза";
+            AttackManner = " Швырнул хвостом ";
+            Land = true;
+        }
 
-
+        public DesertRedBally(string name, string nameSupplement, string attackManner)
+        {
+            Name = name;
+            NameSupplement = nameSupplement;
+            AttackManner = attackManner;
+            Land = true;
+        }
     }
 }

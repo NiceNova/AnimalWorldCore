@@ -6,17 +6,32 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IAmphibia : ILandHabitat, IAquaticHabitat
+    class Amphibia : Animal/*, ILandHabitat, IAquaticHabitat*/
     {
-
-
+        
     }
 
-    class ClaweAdngleTooth : IAmphibia
+    class ClaweAdngleTooth : Amphibia
     {
-        string IAnimal.Name() => "Когтистый углозуб";
-        string IAnimal.NameSupplement() => "Когтистого углозуба";
-        public string AttackManner() => " поцарапал ушами ";
+        public ClaweAdngleTooth() 
+        {
+            Name = "Когтистый углозуб";
+            NameSupplement = "Когтистого углозуба";
+            AttackManner = " поцарапал ушами ";
+            Aqua = true;
+            Land = true;
+        }
+
+        public ClaweAdngleTooth( string name, string nameSupplement, string attackManner)
+        {
+            Name = name;
+            NameSupplement = nameSupplement;
+            AttackManner = attackManner;
+            Aqua = true;
+            Land = true;
+
+        }
+
 
     }
 }

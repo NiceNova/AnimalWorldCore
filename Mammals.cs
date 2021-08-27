@@ -6,15 +6,27 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IMammals : ILandHabitat
+    class Mammals : Animal/*, ILandHabitat*/
     {
        
     }
 
-    class NeedleBelly : IMammals 
+    class NeedleBelly : Mammals 
     {
-        string IAnimal.Name() => "Иглобрюх";
-        string IAnimal.NameSupplement() => "Иглобрюха";
-        public string AttackManner() => " сделал бдыщ ";
+        public NeedleBelly()
+        {
+            Name = "Иглобрюх";
+            NameSupplement = "Иглобрюха";
+            AttackManner = " сделал бдыщ ";
+            Land = true;
+        }
+
+        public NeedleBelly(string name, string nameSupplement, string attackManner)
+        {
+            Name = name;
+            NameSupplement = nameSupplement;
+            AttackManner = attackManner;
+            Land = true;
+        }
     }
 }

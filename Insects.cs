@@ -6,17 +6,27 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface Insects : ILandHabitat
+    class Insects : Animal/*, ILandHabitat*/
     {
 
     }
 
     class YellowShel : Insects
     {
-        string IAnimal.Name() => "Желтопанцерник ";
-        string IAnimal.NameSupplement() => "Желтопанцерника";
-        public string AttackManner() => " плюнул черной жижей ";
+        public YellowShel()
+        {
+            Name = "Желтопанцерник ";
+            NameSupplement = "Желтопанцерника";
+            AttackManner = " плюнул черной жижей ";
+            Land = true;
+        }
 
+        public YellowShel(string name, string nameSupplement, string attackManner)
+        {
+            Name = name;
+            NameSupplement = nameSupplement;
+            AttackManner = attackManner;
+            Land = true;
+        }
     }
-
 }

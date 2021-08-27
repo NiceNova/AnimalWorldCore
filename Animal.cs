@@ -6,33 +6,41 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IAnimal
+    abstract class Animal
     {
-        string Name();
-        string NameSupplement();
-        string AttackManner();
+
+        private string name;
+        private string nameSupplement;
+        private string attackManner;
+
+        public string Name { get => name; set => name = value; }
+        public string NameSupplement { get => nameSupplement; set => nameSupplement = value; }
+        public string AttackManner { get => attackManner; set => attackManner = value; }
+
+
         //string DefencekManner();
         //void Move();
         //void eat();
         //void breathe();
-        void Attack(IAnimal attacked)
+        public void Attack(Animal attacked)
         {
-            Console.WriteLine(this.Name() + this.AttackManner() + attacked.NameSupplement() + "!");
+            Console.WriteLine(this.Name + this.AttackManner + attacked.NameSupplement + "!");
         }
-        bool Aqua() => false;
+        public bool Aqua { get; set; }
 
-        bool Land() => false;
+        public bool Land { get; set; }
 
 
-
-    }
-    interface IAquaticHabitat : IAnimal
-    {
-        bool IAnimal.Aqua() => true;
 
     }
-    interface ILandHabitat : IAnimal
-    {
-        bool IAnimal.Land() => true;
-    }
+    //interface IAquaticHabitat
+    //{
+
+    //    bool Aqua => true;
+
+    //}
+    //interface ILandHabitat
+    //{
+    //    bool Land => true;
+    //}
 }

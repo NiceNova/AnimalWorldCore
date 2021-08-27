@@ -6,18 +6,26 @@ using System.Threading.Tasks;
 
 namespace animalWorld
 {
-    interface IBirds : ILandHabitat
+    class Birds : Animal/*, ILandHabitat*/
     {
     }
-    class BeakTail : IBirds
+    class BeakTail : Birds
     {
 
-        string IAnimal.Name() => "Клювохвост";
-        string IAnimal.NameSupplement() => "Клювохвоста";
-        public string AttackManner() => " сделал кар ";
+        public BeakTail()
+        {
+            Name = "Клювохвост";
+            NameSupplement = "Клювохвоста";
+            AttackManner = " сделал кар ";
+            Land = true;
+        }
 
-
-
-
+        public BeakTail(string name, string nameSupplement, string attackManner)
+        {
+            Name = name;
+            NameSupplement = nameSupplement;
+            AttackManner = attackManner;
+            Land = true;
+        }
     }
 }
